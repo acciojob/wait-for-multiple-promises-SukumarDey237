@@ -36,6 +36,6 @@ Promise.all([promise1,promise2,promise3])
 			  <td>${r3}</td>
 		  </tr><tr>
 			  <td>Total</td>
-			  <td>${r1+r2+r3}</td>
+			  <td>${Math.max(r1,r2,r3)}</td>
 		  </tr>`
 	})
