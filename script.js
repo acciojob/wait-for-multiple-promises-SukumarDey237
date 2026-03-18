@@ -38,8 +38,4 @@ Promise.all([promise1,promise2,promise3])
 			  <td>Total</td>
 			  <td>${(Math.max(r1,r2,r3)/1000).toFixed(3)}</td>
 		  </tr>`
-	}).catch((e)=>{
-	table_body.innerHTML = `<tr>
-			  <td colspan=2 id="loading"> Loading...</td>
-		  </tr>
 	})
