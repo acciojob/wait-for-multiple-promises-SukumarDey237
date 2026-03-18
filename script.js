@@ -5,21 +5,21 @@
 		  </tr>`
 
 let promise1 = new Promise((res,rej)=>{
-	let time = Math.floor(Math.random()*30000)
+	let time = Math.floor(Math.random()*3000)
 	setTimeout(()=>{
-		res(time/1000)
+		res(Math.ceil(time/1000))
 	},time)
 })
 let promise2 = new Promise((res,rej)=>{
-	let time = Math.floor(Math.random()*30000)
+	let time = Math.floor(Math.random()*3000)
 	setTimeout(()=>{
-		res(time/1000)
+		res(Math.ceil(time/1000))
 	},time)
 })
 let promise3 = new Promise((res,rej)=>{
-	let time = Math.floor(Math.random()*30000)
+	let time = Math.floor(Math.random()*3000)
 	setTimeout(()=>{
-		res(time/1000)
+		res(Math.ceil(time/1000))
 	},time)
 })
 
@@ -34,5 +34,8 @@ Promise.all([promise1,promise2,promise3])
 		  </tr><tr>
 			  <td>Promise 3</td>
 			  <td>${r3}</td>
+		  </tr><tr>
+			  <td>Total</td>
+			  <td>${r1+r2+r3}</td>
 		  </tr>`
 	})
