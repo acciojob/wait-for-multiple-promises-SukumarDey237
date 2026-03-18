@@ -7,19 +7,19 @@
 let promise1 = new Promise((res,rej)=>{
 	let time = Math.floor(Math.random()*3000)
 	setTimeout(()=>{
-		res(time/1000)
+		res(Math.ceil(time/1000))
 	},time)
 })
 let promise2 = new Promise((res,rej)=>{
 	let time = Math.floor(Math.random()*3000)
 	setTimeout(()=>{
-		res(time/1000)
+		res(Math.ceil(time/1000))
 	},time)
 })
 let promise3 = new Promise((res,rej)=>{
 	let time = Math.floor(Math.random()*3000)
 	setTimeout(()=>{
-		res(time/1000)
+		res(Math.ceil(time/1000))
 	},time)
 })
 
@@ -27,15 +27,15 @@ Promise.all([promise1,promise2,promise3])
 	.then(([r1,r2,r3])=>{
 		table_body.innerHTML = `<tr>
 			  <td>Promise 1</td>
-			  <td>${r1}</td>
+			  <td>${r1.toFixed(3)}</td>
 		  </tr><tr>
 			  <td>Promise 2</td>
-			  <td>${r2}</td>
+			  <td>${r2.toFixed(3)}</td>
 		  </tr><tr>
 			  <td>Promise 3</td>
-			  <td>${r3}</td>
+			  <td>${r3.toFixed(3)}</td>
 		  </tr><tr>
 			  <td>Total</td>
-			  <td>${Math.max(r1,r2,r3)}</td>
+			  <td>${Math.max(r1,r2,r3).toFixed(3)}</td>
 		  </tr>`
 	})
