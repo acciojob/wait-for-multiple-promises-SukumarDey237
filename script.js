@@ -7,19 +7,19 @@
 let promise1 = new Promise((res,rej)=>{
 	let time = Math.floor(Math.random()*3000)
 	setTimeout(()=>{
-		res(Math.ceil(time/1000))
+		res(time/1000)
 	},time)
 })
 let promise2 = new Promise((res,rej)=>{
 	let time = Math.floor(Math.random()*3000)
 	setTimeout(()=>{
-		res(Math.ceil(time/1000))
+		res(time/1000)
 	},time)
 })
 let promise3 = new Promise((res,rej)=>{
 	let time = Math.floor(Math.random()*3000)
 	setTimeout(()=>{
-		res(Math.ceil(time/1000))
+		res(time/1000)
 	},time)
 })
 
